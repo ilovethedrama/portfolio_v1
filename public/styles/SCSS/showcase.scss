@@ -168,8 +168,10 @@ body {
 .text__standard--xlReducedLH {
   line-height: 6rem;
 }
+
 .heading__intro--paddingBoost {
-  padding: 3rem 0px;
+  padding: 20px 0px;
+  margin-bottom: 200px;
 }
 
 .heading__intro2 {
@@ -578,6 +580,7 @@ html {
     line-height: 2.5rem;
   }
 }
+
 @media only screen and (max-width: 1120px) {
   .ll {
     line-height: 11rem;
@@ -591,6 +594,7 @@ html {
     line-height: 2.5rem;
   }
 }
+
 @media only screen and (max-width: 1060px) {
 
   .header__position {
@@ -622,17 +626,17 @@ html {
     text-align: center;
   }
 
-  .text__standard--xxl{
+  .text__standard--xxl {
     font-size: 14vw;
   }
 
-  .ll{
+  .ll {
     line-height: 8rem;
   }
 }
 
 @media only screen and (max-width: 800px) {
-  .ll{
+  .ll {
     line-height: 5rem;
   }
 }
@@ -653,14 +657,14 @@ html {
     padding-left: 0px;
   }
 
-  .holdall2{
+  .holdall2 {
     flex-flow: column wrap;
   }
 
   .holdall {
     flex-flow: row wrap;
   }
-  
+
   .img__desktop--small,
   .vid__desktop--small {
     height: auto;
