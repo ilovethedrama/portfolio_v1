@@ -20,14 +20,7 @@
 // font-family: 'Nova Round', cursive;
 // font-family: 'Elsie', cursive;
 
-#FFC0CB
-#000000
-#FFFFFF
-#43675C
-#4FBFC9
-
-
-
+#FFC0CB #000000 #FFFFFF #43675C #4FBFC9
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -155,7 +148,7 @@ body {
 //   min-height: 100vh;
 //   display:hiddden;
 //   opacity: 1;
-  
+
 // }
 
 .heading__container2 {
@@ -169,14 +162,18 @@ body {
   display: table;
   margin: 0 auto;
   opacity: .2;
-  z-index:0;
+  z-index: 0;
+}
+
+.text__standard--xlReducedLH {
+  line-height: 6rem;
 }
 
 .heading__intro2 {
   display: table;
   margin: 0 auto;
   opacity: 1;
-  z-index:0;
+  z-index: 0;
 }
 
 ol,
@@ -248,15 +245,49 @@ font-family: 'Nova Cut', cursive; */
 }
 
 .text__standard--xl {
+  font-size: 10vw;
+}
+
+.text__standard--xxl {
   font-size: 20vw;
 }
 
-.header__position {
-    position: absolute;
-    top: 45%;
-    left: 9.5%;
-    right: 9.5%;
+.holdall {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 50px 0;
 }
+
+.ll {
+  line-height: 14rem;
+  margin-bottom: 0;
+}
+
+.ll2 {
+  line-height: 7.5rem;
+}
+
+.text__standard--xla {
+  font-size: 4vw;
+  line-height: 3.5rem;
+}
+
+.holdall2 {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  padding-left: 10px;
+}
+
+.header__position {
+  position: absolute;
+  top: 45%;
+  left: 9.5%;
+  right: 9.5%;
+}
+
 .header__name {
   position: relative;
 }
@@ -308,15 +339,18 @@ font-family: 'Nova Cut', cursive; */
   color: black;
   border-color: black;
   box-shadow: none;
+
   &:hover {
     background: black;
     color: pink;
     border-color: transparent;
   }
+
   &:active {
     border-color: black;
     background: pink;
   }
+
   &:focus {
     box-shadow: none;
     background: pink;
@@ -521,16 +555,45 @@ html {
   .text__standard--lg {
     font-size: 45px;
   }
+
   .text__standard--med {
     font-size: 38px;
   }
 }
 
+
+@media only screen and (max-width: 1220px) {
+  .ll {
+    line-height: 13rem;
+  }
+
+  .ll2 {
+    line-height: 7rem;
+  }
+
+  .text__standard--xla {
+    line-height: 2.5rem;
+  }
+}
+@media only screen and (max-width: 1120px) {
+  .ll {
+    line-height: 11rem;
+  }
+
+  .ll2 {
+    line-height: 6rem;
+  }
+
+  .text__standard--xla {
+    line-height: 2.5rem;
+  }
+}
 @media only screen and (max-width: 1060px) {
 
   .header__position {
     top: 40%;
   }
+
 }
 
 @media only screen and (max-width: 1200px) {
@@ -540,6 +603,34 @@ html {
     right: 10%;
     position: relative;
     background: pink;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .holdall {
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .holdall2 {
+    flex-flow: row nowrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .text__standard--xxl{
+    font-size: 14vw;
+  }
+
+  .ll{
+    line-height: 8rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .ll{
+    line-height: 5rem;
   }
 }
 
@@ -559,12 +650,21 @@ html {
     padding-left: 0px;
   }
 
+  .holdall2{
+    flex-flow: column wrap;
+  }
+
+  .holdall {
+    flex-flow: row wrap;
+  }
+  
   .img__desktop--small,
   .vid__desktop--small {
     height: auto;
     width: 100%;
     padding: 0px;
   }
+
   .img__standard {
     height: auto;
     width: 100%;
@@ -574,6 +674,7 @@ html {
   .text__standard--lg {
     font-size: 20.75px;
   }
+
   // .text__standard--med {
   //   font-size: 38px;
   // }
