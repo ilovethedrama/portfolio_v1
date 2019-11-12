@@ -136,11 +136,9 @@ body {
   line-height: 1;
   font-size: 16px;
   height: 100vh;
+  overflow-x: hidden;
 }
 
-.darkBk {
-  background: black;
-}
 
 // .heading__container {
 //   width: 100%;
@@ -153,15 +151,30 @@ body {
 
 .heading__container2 {
   position: fixed;
+  top: 1px;
   width: 100%;
   margin-top: 30px;
   // min-height: 100vh;
 }
 
+.chunkContainer__content--fullHeight {
+  min-height: 100vh;
+  position: relative;
+  z-index: 3;
+}
+
+.background__black--fade {
+  background-image: linear-gradient(black, transparent);
+}
+
+.background__black {
+  background: black;
+}
+
 .heading__intro {
   display: table;
   margin: 0 auto;
-  opacity: .2;
+  opacity: .15;
   z-index: 0;
 }
 
@@ -170,8 +183,21 @@ body {
 }
 
 .heading__intro--paddingBoost {
-  padding: 20px 0px;
+  padding: 100px 0px 300px 0;
   margin-bottom: 200px;
+  background: black;
+  z-index: 3;
+  position: relative;
+}
+
+
+.marginBoost {
+  margin-top: 200px;
+}
+
+.image__profile {
+  position: relative;
+  z-index: 3;
 }
 
 .heading__intro2 {
@@ -179,6 +205,9 @@ body {
   margin: 0 auto;
   opacity: 1;
   z-index: 0;
+  position: absolute;
+  top: 50%;
+
 }
 
 ol,
@@ -263,7 +292,14 @@ font-family: 'Nova Cut', cursive; */
   align-items: flex-start;
   justify-content: flex-start;
   padding: 50px 0;
+  background: black;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
 }
+
+
 
 .ll {
   line-height: 14rem;
@@ -284,6 +320,7 @@ font-family: 'Nova Cut', cursive; */
   flex-flow: column wrap;
   justify-content: flex-start;
   padding-left: 10px;
+  // position: fixed;
 }
 
 .header__position {
@@ -375,6 +412,12 @@ font-family: 'Nova Cut', cursive; */
   background: pink;
   padding: 20px 60px;
   margin-bottom: 0;
+}
+
+.chunkContainer__content--middleGround {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .skills__iconContainer {
@@ -480,73 +523,82 @@ html {
   display: none;
 }
 
-// // Grays
-// $color: #252526;
-// $color2: #313134;
-// $color3: #3e3e40;
-// $color4: #4a4a4d;
-// $color5: #575759;
+.reveal {
+  opacity: 0;
+}
 
-// @function makelongshadow($color, $color2, $color3, $color4, $color5) {
-//   $val: 0px 0px $color;
-//   @for $i from 1 through 20 {
-//     $val: #{$val}, -#{$i}px #{$i}px #{$color};
-//   }
-//   @for $i from 21 through 40 {
-//     $val: #{$val}, -#{$i}px #{$i}px #{$color2};
-//   }
-//   @for $i from 41 through 60 {
-//     $val: #{$val}, -#{$i}px #{$i}px #{$color3};
-//   }
-//   @for $i from 61 through 80 {
-//     $val: #{$val}, -#{$i}px #{$i}px #{$color4};
-//   }
-//   @for $i from 81 through 100 {
-//     $val: #{$val}, -#{$i}px #{$i}px #{$color5};
-//   }
-//   @return $val;
-// }
+// Grays
+$color: #252526;
+$color2: #313134;
+$color3: #3e3e40;
+$color4: #4a4a4d;
+$color5: #575759;
 
-// @keyframes animateShadow {
-//   0% {
-//     text-shadow: makelongshadow($color, $color2, $color3, $color4, $color5);
-//   }
-//   20% {
-//     text-shadow: makelongshadow($color2, $color3, $color4, $color5, $color);
-//   }
-//   40% {
-//     text-shadow: makelongshadow($color3, $color4, $color5, $color, $color2);
-//   }
-//   60% {
-//     text-shadow: makelongshadow($color4, $color5, $color, $color2, $color3);
-//   }
-//   80% {
-//     text-shadow: makelongshadow($color5, $color, $color2, $color3, $color4);
-//   }
-//   100% {
-//     text-shadow: makelongshadow($color, $color2, $color3, $color4, $color5);
-//   }
-// }
+@function makelongshadow($color, $color2, $color3) {
+  $val: 0px 0px $color;
 
-// .name {
-//   text-shadow: makelongshadow($color, $color2, $color3, $color4, $color5);
-//   animation-name: animateShadow;
-//   animation-duration: 1s;
-//   animation-iteration-count: infinite;
-// }
+  @for $i from 1 through 10 {
+    $val: #{$val},
+    -#{$i}px #{$i}px #{$color};
+  }
 
-@media only screen and (min-width: 960px) {
-  // .solid {
-  //   position: absolute;
-  //   width: 70%;
-  //   top: 90%;
-  //   left: 15%;
-  //   right: 15%;
-  //   z-index: 0;
-  //   background: pink;
-  //   height: 128vh;
+  @for $i from 11 through 22 {
+    $val: #{$val},
+    -#{$i}px #{$i}px #{$color2};
+  }
+
+  @for $i from 23 through 34 {
+    $val: #{$val},
+    -#{$i}px #{$i}px #{$color3};
+  }
+
+  // @for $i from 61 through 80 {
+  //   $val: #{$val},
+  //   -#{$i}px #{$i}px #{$color4};
   // }
 
+  // @for $i from 81 through 100 {
+  //   $val: #{$val},
+  //   -#{$i}px #{$i}px #{$color5};
+  // }
+
+  @return $val;
+}
+
+@keyframes animateShadow {
+  0% {
+    text-shadow: makelongshadow($color, $color2, $color3);
+  }
+
+  20% {
+    text-shadow: makelongshadow($color2, $color3, $color);
+  }
+
+  40% {
+    text-shadow: makelongshadow($color3, $color, $color2);
+  }
+
+  60% {
+    text-shadow: makelongshadow($color, $color2, $color3);
+  }
+
+  80% {
+    text-shadow: makelongshadow($color, $color2, $color3);
+  }
+
+  100% {
+    text-shadow: makelongshadow($color, $color2, $color3);
+  }
+}
+
+.name {
+  text-shadow: makelongshadow($color, $color2, $color3);
+  animation-name: animateShadow;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@media only screen and (min-width: 960px) {
   .img__collection--border {
     width: 80%;
     left: 10%;
