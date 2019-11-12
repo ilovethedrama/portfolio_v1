@@ -30,7 +30,7 @@ scssToCss.description =
 
 
 const distill = () => {
-    return gulp.src('./styles/CSS/showcase.css')
+    return gulp.src('./public/styles/CSS/showcase.css')
         .pipe(uglifycss({
             'uglyComments': true
         }))
@@ -57,7 +57,7 @@ const bSync = () => {
 
 
 const smallerJS = (done) => {
-    gulp.src('./JS/showcase.js')
+    gulp.src('./public/JS/showcase.js')
         .pipe(minify())
         .pipe(gulp.dest('./JS/dist'))
     done();
