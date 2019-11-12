@@ -59,7 +59,7 @@ const bSync = () => {
 const smallerJS = (done) => {
     gulp.src('./public/JS/showcase.js')
         .pipe(minify())
-        .pipe(gulp.dest('./JS/dist'))
+        .pipe(gulp.dest('./production/'))
     done();
 }
 
