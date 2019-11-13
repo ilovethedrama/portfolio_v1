@@ -661,16 +661,7 @@ $color5: #575759;
   //  }
 }
 
-@media only screen and (max-width: 680px) {
-  .header__position--FE {
-    top: 47%;
-    position: absolute;
-    left: 8%;
-    right: 5%;
-    letter-spacing: 1rem;
-    font-size: 1.9vw;
-  }
-}
+
 
 @media only screen and (max-width: 800px) {
   .ll {
@@ -765,5 +756,16 @@ $color5: #575759;
 
   .text__standard--xla {
     line-height: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .header__position--FE {
+    // top: 47%;
+    // position: absolute;
+    left: 8%;
+    right: 5%;
+    letter-spacing: 1rem;
+    font-size: 1.9vw;
   }
 }
