@@ -20,7 +20,8 @@
 // font-family: 'Nova Round', cursive;
 // font-family: 'Elsie', cursive;
 
-#FFC0CB #000000 #FFFFFF #43675C #4FBFC9
+//Colour Scheme #FFC0CB #000000 #FFFFFF #43675C #4FBFC9
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -137,8 +138,8 @@ body {
   font-size: 16px;
   height: 100vh;
   overflow-x: hidden;
+  margin-bottom: 200px;
 }
-
 
 // .heading__container {
 //   width: 100%;
@@ -171,10 +172,14 @@ body {
   background: black;
 }
 
+.peepThis {
+  opacity: 0;
+}
+
 .heading__intro {
   display: table;
   margin: 0 auto;
-  opacity: .15;
+  opacity: 0.15;
   z-index: 0;
 }
 
@@ -190,9 +195,15 @@ body {
   position: relative;
 }
 
-
 .marginBoost {
   margin-top: 200px;
+}
+
+.paddingBoost {
+  padding: 200px 0px;
+}
+.paddingBoost--slight {
+  padding: 50px 0px;
 }
 
 .image__profile {
@@ -207,7 +218,6 @@ body {
   z-index: 0;
   position: absolute;
   top: 50%;
-
 }
 
 ol,
@@ -298,8 +308,6 @@ font-family: 'Nova Cut', cursive; */
   position: relative;
   z-index: 1;
 }
-
-
 
 .ll {
   line-height: 14rem;
@@ -462,7 +470,7 @@ font-family: 'Nova Cut', cursive; */
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  // background: pink;
+  padding-bottom: 100px;
 }
 
 .img__tile--primary {
@@ -498,6 +506,15 @@ font-family: 'Nova Cut', cursive; */
 
 html {
   background-color: black;
+}
+
+.header__position--FE {
+  top: 46%;
+    position: absolute;
+    left: 8%;
+    right: 5%;
+    letter-spacing: 1.5rem;
+    font-size: 3vw;
 }
 
 .textTile__standard {
@@ -537,19 +554,16 @@ $color5: #575759;
 @function makelongshadow($color, $color2, $color3) {
   $val: 0px 0px $color;
 
-  @for $i from 1 through 10 {
-    $val: #{$val},
-    -#{$i}px #{$i}px #{$color};
+  @for $i from 1 through 5 {
+    $val: #{$val}, -#{$i}px #{$i}px #{$color};
   }
 
-  @for $i from 11 through 22 {
-    $val: #{$val},
-    -#{$i}px #{$i}px #{$color2};
+  @for $i from 6 through 11 {
+    $val: #{$val}, -#{$i}px #{$i}px #{$color2};
   }
 
-  @for $i from 23 through 34 {
-    $val: #{$val},
-    -#{$i}px #{$i}px #{$color3};
+  @for $i from 12 through 17 {
+    $val: #{$val}, -#{$i}px #{$i}px #{$color3};
   }
 
   // @for $i from 61 through 80 {
@@ -583,114 +597,19 @@ $color5: #575759;
   }
 
   80% {
-    text-shadow: makelongshadow($color, $color2, $color3);
+    text-shadow: makelongshadow($color2, $color3, $color);
   }
 
   100% {
-    text-shadow: makelongshadow($color, $color2, $color3);
+    text-shadow: makelongshadow($color3, $color, $color2);
   }
 }
 
 .name {
   text-shadow: makelongshadow($color, $color2, $color3);
   animation-name: animateShadow;
-  animation-duration: 1s;
+  animation-duration: 0.7s;
   animation-iteration-count: infinite;
-}
-
-@media only screen and (min-width: 960px) {
-  .img__collection--border {
-    width: 80%;
-    left: 10%;
-    right: 10%;
-    position: relative;
-    background: pink;
-    padding: 20px 60px;
-    margin-bottom: 0;
-  }
-
-  .text__standard--lg {
-    font-size: 45px;
-  }
-
-  .text__standard--med {
-    font-size: 38px;
-  }
-}
-
-
-@media only screen and (max-width: 1220px) {
-  .ll {
-    line-height: 13rem;
-  }
-
-  .ll2 {
-    line-height: 7rem;
-  }
-
-  .text__standard--xla {
-    line-height: 2.5rem;
-  }
-}
-
-@media only screen and (max-width: 1120px) {
-  .ll {
-    line-height: 11rem;
-  }
-
-  .ll2 {
-    line-height: 6rem;
-  }
-
-  .text__standard--xla {
-    line-height: 2.5rem;
-  }
-}
-
-@media only screen and (max-width: 1060px) {
-
-  .header__position {
-    top: 40%;
-  }
-
-}
-
-@media only screen and (max-width: 1200px) {
-  .chunkContainer__content--centered {
-    width: 80%;
-    left: 10%;
-    right: 10%;
-    position: relative;
-    background: pink;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  .holdall {
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .holdall2 {
-    flex-flow: row nowrap;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .text__standard--xxl {
-    font-size: 14vw;
-  }
-
-  .ll {
-    line-height: 8rem;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .ll {
-    line-height: 5rem;
-  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -734,10 +653,117 @@ $color5: #575759;
     font-size: 20.75px;
   }
 
-  // .text__standard--med {
-  //   font-size: 38px;
-  // }
+  .text__standard--med {
+    font-size: 38px;
+  }
   // .text__standard--sm {
   //   font-size: 1rem;
   //  }
+}
+
+@media only screen and (max-width: 680px) {
+  .header__position--FE {
+    top: 47%;
+    position: absolute;
+    left: 8%;
+    right: 5%;
+    letter-spacing: 1rem;
+    font-size: 1.9vw;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .ll {
+    line-height: 5rem;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .img__collection--border {
+    width: 80%;
+    left: 10%;
+    right: 10%;
+    position: relative;
+    background: pink;
+    padding: 20px 60px;
+    margin-bottom: 0;
+  }
+
+  .text__standard--lg {
+    font-size: 45px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .holdall {
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .holdall2 {
+    flex-flow: row nowrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .text__standard--xxl {
+    font-size: 14vw;
+  }
+
+  .ll {
+    line-height: 8rem;
+  }
+
+  .header__position--FE {
+    top: 46%;
+      position: absolute;
+      left: 8%;
+      right: 5%;
+      letter-spacing: 1.25rem;
+      font-size: 2vw;
+  }
+}
+
+
+
+@media only screen and (max-width: 1120px) {
+  .ll {
+    line-height: 11rem;
+  }
+
+  .ll2 {
+    line-height: 6rem;
+  }
+
+  .text__standard--xla {
+    line-height: 2.5rem;
+  }
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+  .chunkContainer__content--centered {
+    width: 80%;
+    left: 10%;
+    right: 10%;
+    position: relative;
+    background: pink;
+  }
+
+}
+
+@media only screen and (max-width: 1220px) {
+  .ll {
+    line-height: 13rem;
+  }
+
+  .ll2 {
+    line-height: 7rem;
+  }
+
+  .text__standard--xla {
+    line-height: 2.5rem;
+  }
 }
