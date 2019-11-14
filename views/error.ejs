@@ -1,11 +1,23 @@
 <% include partials/header %>
+<div class='container-fluid background__black noMargins'>
+
+    <div
+        class='heading__intro--error chunkContainer__content--fullHeight chunkContainer__content--middleGround header__name '>
+        <h3
+            class='name text__standard3 opacity__dimmer text__standard--center text__standard--xl text__standard--uppercase text__standard--light'>
+            That page couldn't be found</h3>
 
 
-<div class='container-fluid'>
-    <h1 class='text__standard text__standard--center text__standard--lg '>That page couldn't be found</h1>
-    <img class="img__standard" src="/Media/damn.gif" alt="">
-
-    <h4 class='text__standard text__standard--center text__standard--lg '>Womp womp wooooohhhhh</h4>
+        <video autoplay loop muted class='vid__desktop--error'>
+            <source src="https://res.cloudinary.com/yelpcampmedia/video/upload/v1573748128/portfolio/notfound2.webm"
+                type="video/webm">
+            <source src="https://res.cloudinary.com/yelpcampmedia/video/upload/v1573750259/portfolio/notfound2_mp4.mp4"
+                type="video/mp4">
+        </video>
+    </div>
 </div>
+<a href='http://www.cacheruleseverythingaroundme.co.uk'
+    class='text__standard3  text__standard--uppercase btn__goBack--error text__standard text__standard--med'>Go
+    Back</a>
 
 <% include partials/footer %>
