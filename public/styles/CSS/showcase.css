@@ -113,8 +113,7 @@ body {
   line-height: 1;
   font-size: 16px;
   height: 100vh;
-  overflow-x: hidden;
-  margin-bottom: 200px; }
+  overflow-x: hidden; }
 
 .heading__container2 {
   position: fixed;
@@ -143,15 +142,16 @@ body {
   opacity: 0.15;
   z-index: 0; }
 
+.heading__intro--error {
+  display: table;
+  margin: 0 auto;
+  z-index: 0; }
+
+.opacity__dimmer {
+  opacity: 0.35; }
+
 .text__standard--xlReducedLH {
   line-height: 6rem; }
-
-.heading__intro--paddingBoost {
-  padding: 100px 0px 300px 0;
-  margin-bottom: 200px;
-  background: black;
-  z-index: 3;
-  position: relative; }
 
 .marginBoost {
   margin-top: 200px; }
@@ -212,7 +212,7 @@ font-family: 'Nova Cut', cursive; */
 .text__intro {
   padding: 0 0 30px 30px; }
 
-.text__standard--white {
+.text__standard--light {
   color: white; }
 
 .text__standard--pink {
@@ -254,6 +254,9 @@ font-family: 'Nova Cut', cursive; */
   line-height: 14rem;
   margin-bottom: 0; }
 
+.noMargins {
+  margin: 0; }
+
 .ll2 {
   line-height: 7.5rem; }
 
@@ -285,12 +288,6 @@ font-family: 'Nova Cut', cursive; */
   left: 25%;
   top: 30.5%; }
 
-.text__gradient--black {
-  background: -webkit-linear-gradient(black 49%, white 50%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text; }
-
 .text__standard {
   font-family: "Nova Cut", cursive; }
 
@@ -315,8 +312,7 @@ font-family: 'Nova Cut', cursive; */
 
 .btn-outline-primary {
   color: black;
-  border-color: black;
-  box-shadow: none; }
+  border-color: black; }
   .btn-outline-primary:hover {
     background: black;
     color: pink;
@@ -325,8 +321,14 @@ font-family: 'Nova Cut', cursive; */
     border-color: black;
     background: pink; }
   .btn-outline-primary:focus {
-    box-shadow: none;
+    border-color: black;
     background: pink; }
+
+.btn-outline-primary:not(:disabled):not(.disabled):active {
+  color: pink;
+  background-color: black;
+  border-color: black;
+  box-shadow: none; }
 
 .modal__box--stretch {
   height: 80%;
@@ -356,6 +358,12 @@ font-family: 'Nova Cut', cursive; */
 .text__standard--uppercase {
   text-transform: uppercase; }
 
+.btn__goBack--error {
+  position: absolute;
+  left: 70%;
+  bottom: 0%;
+  padding-bottom: 10px; }
+
 .img__standard {
   height: 347px;
   width: 100%;
@@ -370,6 +378,14 @@ font-family: 'Nova Cut', cursive; */
   padding: 15px;
   -o-object-fit: contain;
      object-fit: contain; }
+
+.vid__desktop--error {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  opacity: 1; }
 
 .img__small {
   height: 250px;
@@ -452,14 +468,11 @@ html {
           align-items: center; }
 
 .textTile__standard:hover,
-.textTile__standard:active {
+.textTile__standard:active, .reveal {
   opacity: 0; }
 
 .img__tile--expanded {
   display: none; }
-
-.reveal {
-  opacity: 0; }
 
 @-webkit-keyframes animateShadow {
   0% {
@@ -574,7 +587,11 @@ html {
     left: 8%;
     right: 5%;
     letter-spacing: 1.25rem;
-    font-size: 2vw; } }
+    font-size: 2vw; }
+  .heading__intro--error {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-flow: row wrap; } }
 
 @media only screen and (max-width: 1120px) {
   .ll {
