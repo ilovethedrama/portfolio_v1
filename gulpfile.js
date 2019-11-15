@@ -34,7 +34,7 @@ const distill = () => {
         .pipe(uglifycss({
             'uglyComments': true
         }))
-        .pipe(gulp.dest('./production/'))
+        .pipe(gulp.dest('./public/styles/CSS/'))
 }
 
 let thePausinator;
