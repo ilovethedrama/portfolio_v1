@@ -113,7 +113,8 @@ body {
   line-height: 1;
   font-size: 16px;
   height: 100vh;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  min-width: 300px; }
 
 .heading__container2 {
   position: fixed;
@@ -468,7 +469,8 @@ html {
           align-items: center; }
 
 .textTile__standard:hover,
-.textTile__standard:active, .reveal {
+.textTile__standard:active,
+.reveal {
   opacity: 0; }
 
 .img__tile--expanded {
@@ -511,6 +513,79 @@ html {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite; }
 
+@media only screen and (max-width: 1220px) {
+  .ll {
+    line-height: 13rem; }
+  .ll2 {
+    line-height: 7rem; }
+  .text__standard--xla {
+    line-height: 2.5rem; } }
+
+@media only screen and (max-width: 1200px) {
+  .chunkContainer__content--centered {
+    width: 80%;
+    left: 10%;
+    right: 10%;
+    position: relative;
+    background: pink; } }
+
+@media only screen and (max-width: 1120px) {
+  .ll {
+    line-height: 11rem; }
+  .ll2 {
+    line-height: 6rem; }
+  .text__standard--xla {
+    line-height: 2.5rem; } }
+
+@media only screen and (max-width: 1000px) {
+  .holdall {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-flow: column wrap;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center; }
+  .holdall2 {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-flow: row nowrap;
+    -webkit-box-pack: center;
+            justify-content: center;
+    text-align: center; }
+  .text__standard--xxl {
+    font-size: 14vw; }
+  .ll {
+    line-height: 8rem; }
+  .header__position--FE {
+    letter-spacing: 1.25rem;
+    font-size: 2vw; }
+  .heading__intro--error {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-flow: row wrap; } }
+
+@media only screen and (min-width: 960px) {
+  .img__collection--border {
+    width: 80%;
+    left: 10%;
+    right: 10%;
+    position: relative;
+    background: pink;
+    padding: 20px 60px;
+    margin-bottom: 0; }
+  .text__standard--lg {
+    font-size: 45px; } }
+
+@media only screen and (max-width: 680px) {
+  .header__position--FE {
+    letter-spacing: 1rem;
+    font-size: 1.9vw; } }
+
+@media only screen and (max-width: 800px) {
+  .ll {
+    line-height: 5rem; } }
+
 @media only screen and (max-width: 600px) {
   .chunkContainer__content--centered {
     width: 100%;
@@ -545,81 +620,12 @@ html {
   .text__standard--med {
     font-size: 38px; } }
 
-@media only screen and (max-width: 800px) {
-  .ll {
-    line-height: 5rem; } }
-
-@media only screen and (min-width: 960px) {
-  .img__collection--border {
-    width: 80%;
-    left: 10%;
-    right: 10%;
-    position: relative;
-    background: pink;
-    padding: 20px 60px;
-    margin-bottom: 0; }
-  .text__standard--lg {
-    font-size: 45px; } }
-
-@media only screen and (max-width: 1000px) {
-  .holdall {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-            flex-flow: column wrap;
-    -webkit-box-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-            align-items: center; }
-  .holdall2 {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-flow: row nowrap;
-    -webkit-box-pack: center;
-            justify-content: center;
-    text-align: center; }
-  .text__standard--xxl {
-    font-size: 14vw; }
-  .ll {
-    line-height: 8rem; }
+@media only screen and (max-width: 500px) {
   .header__position--FE {
-    top: 46%;
-    position: absolute;
-    left: 8%;
-    right: 5%;
-    letter-spacing: 1.25rem;
-    font-size: 2vw; }
-  .heading__intro--error {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-flow: row wrap; } }
-
-@media only screen and (max-width: 1120px) {
-  .ll {
-    line-height: 11rem; }
-  .ll2 {
-    line-height: 6rem; }
-  .text__standard--xla {
-    line-height: 2.5rem; } }
-
-@media only screen and (max-width: 1200px) {
-  .chunkContainer__content--centered {
-    width: 80%;
-    left: 10%;
-    right: 10%;
-    position: relative;
-    background: pink; } }
-
-@media only screen and (max-width: 1220px) {
-  .ll {
-    line-height: 13rem; }
-  .ll2 {
-    line-height: 7rem; }
-  .text__standard--xla {
-    line-height: 2.5rem; } }
-
-@media only screen and (max-width: 680px) {
-  .header__position--FE {
-    left: 8%;
-    right: 5%;
+    top: -33%;
     letter-spacing: 1rem;
-    font-size: 1.9vw; } }
+    font-size: 1.9vw;
+    line-height: 1rem;
+    font-size: 3vw;
+    left: 5%;
+    right: -1%; } }
