@@ -181,6 +181,11 @@ $colour-light: rgb(255, 255, 255);
   display: table;
   margin: 0 auto;
   z-index: 0;
+  align-content: center;
+}
+
+.chunkContainer__content--error {
+  height: 100vh;
 }
 
 .opacity__dimmer {
@@ -244,7 +249,15 @@ table {
 a:hover,
 a {
   text-decoration: none;
+}
+
+.social__button {
   color: $milkshakePink;
+  transition: all 1s ease;
+
+  &:hover {
+    color: grey;
+  }
 }
 
 /*font-family: 'Libre Franklin', sans-serif;
@@ -380,6 +393,10 @@ font-family: 'Nova Cut', cursive; */
   line-height: 2rem;
 }
 
+.btn-outline-primary.disabled {
+  color: $colour-dark;
+}
+
 .btn-outline-primary {
   color: $colour-dark;
   border-color: $colour-dark;
@@ -443,6 +460,10 @@ font-family: 'Nova Cut', cursive; */
   left: 70%;
   bottom: 0%;
   padding-bottom: 10px;
+
+  &:hover {
+    color: pink;
+  }
 }
 
 
