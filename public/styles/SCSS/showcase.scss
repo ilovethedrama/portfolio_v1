@@ -162,6 +162,10 @@ $colour-light: rgb(255, 255, 255);
   background-image: linear-gradient($colour-dark, transparent);
 }
 
+.background__black--fadeReverse {
+  background-image: linear-gradient(transparent, $colour-dark);
+}
+
 .background__black {
   background: $colour-dark;
 }
@@ -311,7 +315,7 @@ font-family: 'Nova Cut', cursive; */
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: flex-end;
   padding: 50px 0;
   background: $colour-dark;
   width: 100%;
@@ -390,16 +394,17 @@ font-family: 'Nova Cut', cursive; */
 }
 
 .text__chunk {
-  line-height: 2rem;
+  line-height: 3rem;
 }
 
 .btn-outline-primary.disabled {
   color: $colour-dark;
+  background: $milkshakePink;
 }
 
 .btn-outline-primary {
-  color: $colour-dark;
-  border-color: $colour-dark;
+  color: $milkshakePink;
+  border-color: $milkshakePink;
 
   &:hover {
     background: $colour-dark;
@@ -415,6 +420,7 @@ font-family: 'Nova Cut', cursive; */
   &:focus {
     border-color: $colour-dark;
     background: $milkshakePink;
+    color: $colour-dark;
   }
 }
 
@@ -435,7 +441,7 @@ font-family: 'Nova Cut', cursive; */
   left: 20%;
   right: 20%;
   position: relative;
-  background: $milkshakePink;
+  // background: $milkshakePink;
   padding: 20px 60px;
   margin-bottom: 0;
 }
@@ -448,7 +454,7 @@ font-family: 'Nova Cut', cursive; */
 
 .skills__iconContainer {
   padding: 40px 0;
-  background: $milkshakePink;
+  background: transparent;
 }
 
 .text__standard--uppercase {
@@ -501,7 +507,6 @@ font-family: 'Nova Cut', cursive; */
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  background: $milkshakePink;
 }
 
 .img__collectionContainer {
@@ -539,7 +544,6 @@ font-family: 'Nova Cut', cursive; */
 
 .img__tileBorder--pink {
   border: 3px solid $milkshakePink;
-  // border: 3px solid rgba(255, 192, 203, 0.1);
 }
 
 html {
@@ -672,7 +676,6 @@ $color5: #575759;
     left: 10%;
     right: 10%;
     position: relative;
-    background: $milkshakePink;
   }
 }
 
@@ -761,7 +764,7 @@ $color5: #575759;
     right: 0%;
     padding: 20px;
     position: relative;
-    background: $milkshakePink;
+    text-align: center;
   }
 
   .container-fluid {
@@ -785,6 +788,10 @@ $color5: #575759;
     padding: 0px;
   }
 
+  .img__tile--expanded {
+    background: $colour-dark;
+  }
+
   .img__standard {
     height: auto;
     width: 100%;
@@ -796,12 +803,16 @@ $color5: #575759;
   }
 
   .text__standard--med {
-    font-size: 38px;
+    font-size: 29px;
   }
 
-  // .text__standard--sm {
-  //   font-size: 1rem;
-  //  }
+  .text__chunk {
+    line-height: 2rem;
+  }
+
+  .text__standard--sm {
+    font-size: .75rem;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -813,5 +824,9 @@ $color5: #575759;
     font-size: 3vw;
     left: 5%;
     right: -1%;
+  }
+
+  .marginBoost {
+    margin: 0;
   }
 }
