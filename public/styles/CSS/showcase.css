@@ -272,9 +272,6 @@ font-family: 'Nova Cut', cursive; */
 .noMargins {
   margin: 0; }
 
-.text__standard--lineHeightBoost {
-  line-height: 7.5rem; }
-
 .text__standard--xla {
   font-size: 4vw;
   line-height: 3.5rem; }
