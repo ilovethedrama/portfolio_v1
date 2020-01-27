@@ -818,13 +818,21 @@ $color5: #575759;
 
 @media only screen and (max-width: 500px) {
   .header__position--FE {
-    top: -33%;
+    top: 40%;
     letter-spacing: 1rem;
     font-size: 1.9vw;
     line-height: 1rem;
     font-size: 3vw;
     left: 5%;
     right: -1%;
+  }
+
+  .textTile__standard {
+    opacity: 0;
+  }
+
+  .heading__intro--name {
+    line-height: 5rem;
   }
 
   .text__standard--xla {
@@ -839,6 +847,9 @@ $color5: #575759;
     font-size: 18vw;
   }
 
+  .chunkContainer__content--fullHeight {
+    min-height: 100%;
+  }
 
   .marginBoost {
     margin: 0;
