@@ -324,7 +324,7 @@ font-family: 'Nova Cut', cursive; */
   z-index: 1;
 }
 
-.ll {
+.text__standard--lineHeightBoost {
   line-height: 14rem;
   margin-bottom: 0;
 }
@@ -333,7 +333,7 @@ font-family: 'Nova Cut', cursive; */
   margin: 0;
 }
 
-.ll2 {
+.text__standard--lineHeightBoost {
   line-height: 7.5rem;
 }
 
@@ -657,11 +657,11 @@ $color5: #575759;
 
 
 @media only screen and (max-width: 1220px) {
-  .ll {
+  .text__standard--lineHeightBoost {
     line-height: 13rem;
   }
 
-  .ll2 {
+  .text__standard--lineHeightBoostMini {
     line-height: 7rem;
   }
 
@@ -680,11 +680,11 @@ $color5: #575759;
 }
 
 @media only screen and (max-width: 1120px) {
-  .ll {
+  .text__standard--lineHeightBoost {
     line-height: 11rem;
   }
 
-  .ll2 {
+  .text__standard--lineHeightBoostMini {
     line-height: 6rem;
   }
 
@@ -710,7 +710,7 @@ $color5: #575759;
     font-size: 14vw;
   }
 
-  .ll {
+  .text__standard--lineHeightBoost {
     line-height: 8rem;
   }
 
@@ -752,7 +752,7 @@ $color5: #575759;
 
 
 @media only screen and (max-width: 800px) {
-  .ll {
+  .text__standard--lineHeightBoost {
     line-height: 5rem;
   }
 }
@@ -775,10 +775,11 @@ $color5: #575759;
 
   .holdall2 {
     flex-flow: column wrap;
+    padding-left: 0;
   }
 
   .holdall {
-    flex-flow: row wrap;
+    flex-flow: column wrap;
   }
 
   .img__desktop--small,
@@ -825,6 +826,19 @@ $color5: #575759;
     left: 5%;
     right: -1%;
   }
+
+  .text__standard--xla {
+    font-size: 8vw;
+  }
+
+  .text__standard--xxl {
+    font-size: 15vw;
+  }
+
+  .text__standard--xl {
+    font-size: 18vw;
+  }
+
 
   .marginBoost {
     margin: 0;

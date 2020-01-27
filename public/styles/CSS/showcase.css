@@ -265,14 +265,14 @@ font-family: 'Nova Cut', cursive; */
   position: relative;
   z-index: 1; }
 
-.ll {
+.text__standard--lineHeightBoost {
   line-height: 14rem;
   margin-bottom: 0; }
 
 .noMargins {
   margin: 0; }
 
-.ll2 {
+.text__standard--lineHeightBoost {
   line-height: 7.5rem; }
 
 .text__standard--xla {
@@ -533,9 +533,9 @@ html {
           animation-iteration-count: infinite; }
 
 @media only screen and (max-width: 1220px) {
-  .ll {
+  .text__standard--lineHeightBoost {
     line-height: 13rem; }
-  .ll2 {
+  .text__standard--lineHeightBoostMini {
     line-height: 7rem; }
   .text__standard--xla {
     line-height: 2.5rem; } }
@@ -548,9 +548,9 @@ html {
     position: relative; } }
 
 @media only screen and (max-width: 1120px) {
-  .ll {
+  .text__standard--lineHeightBoost {
     line-height: 11rem; }
-  .ll2 {
+  .text__standard--lineHeightBoostMini {
     line-height: 6rem; }
   .text__standard--xla {
     line-height: 2.5rem; } }
@@ -573,7 +573,7 @@ html {
     text-align: center; }
   .text__standard--xxl {
     font-size: 14vw; }
-  .ll {
+  .text__standard--lineHeightBoost {
     line-height: 8rem; }
   .header__position--FE {
     letter-spacing: 1.25rem;
@@ -601,7 +601,7 @@ html {
     font-size: 1.9vw; } }
 
 @media only screen and (max-width: 800px) {
-  .ll {
+  .text__standard--lineHeightBoost {
     line-height: 5rem; } }
 
 @media only screen and (max-width: 600px) {
@@ -619,11 +619,12 @@ html {
   .holdall2 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-            flex-flow: column wrap; }
+            flex-flow: column wrap;
+    padding-left: 0; }
   .holdall {
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-            flex-flow: row wrap; }
+            flex-flow: column wrap; }
   .img__desktop--small,
   .vid__desktop--small {
     height: auto;
@@ -653,5 +654,11 @@ html {
     font-size: 3vw;
     left: 5%;
     right: -1%; }
+  .text__standard--xla {
+    font-size: 8vw; }
+  .text__standard--xxl {
+    font-size: 15vw; }
+  .text__standard--xl {
+    font-size: 18vw; }
   .marginBoost {
     margin: 0; } }
